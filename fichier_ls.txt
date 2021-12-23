@@ -1,5 +1,5 @@
 -----------------------------------------------
-UBP company		   19:22:22 23/11/2021
+UBP company		   21:11:47 23/11/2021
 -----------------------------------------------
  langue | banque |    lieu     | compte_postal 
 --------+--------+-------------+---------------
@@ -10,8 +10,20 @@ UBP company		   19:22:22 23/11/2021
 (4 lignes)
 
 -----------------------------------------------
+total 40
+drwxr-xr-x 3 rickyd rickyd  4096 déc 23 21:11 build
+drwxr-xr-x 3 rickyd rickyd  4096 déc  7 10:00 dist
+-rw-r--r-- 1 rickyd rickyd   449 déc 23 21:11 fichier_ls.txt
+-rw-r--r-- 1 rickyd rickyd  1334 déc 23 19:47 main.c
+-rw-r--r-- 1 rickyd rickyd  3482 déc  7 09:59 Makefile
+-rw-r--r-- 1 rickyd rickyd 10344 déc 23 21:11 methodes.c
+-rw-r--r-- 1 rickyd rickyd   607 déc 23 19:48 methodes.h
+drwxr-xr-x 3 rickyd rickyd  4096 déc  7 09:59 nbproject
+Run command ls -l 2>&1 >>fichier_ls.txt
+Child pid: 10338
+Child exited with status: 0
 -----------------------------------------------
-UBP company		   19:34:39 23/11/2021
+UBP company		   21:12:50 23/11/2021
 -----------------------------------------------
  langue | banque |    lieu     | compte_postal 
 --------+--------+-------------+---------------
@@ -22,3 +34,41 @@ UBP company		   19:34:39 23/11/2021
 (4 lignes)
 
 -----------------------------------------------
+total 40
+drwxr-xr-x 3 rickyd rickyd  4096 déc 23 21:12 build
+drwxr-xr-x 3 rickyd rickyd  4096 déc  7 10:00 dist
+-rw-r--r-- 1 rickyd rickyd  1442 déc 23 21:12 fichier_ls.txt
+-rw-r--r-- 1 rickyd rickyd  1334 déc 23 19:47 main.c
+-rw-r--r-- 1 rickyd rickyd  3482 déc  7 09:59 Makefile
+-rw-r--r-- 1 rickyd rickyd 10414 déc 23 21:12 methodes.c
+-rw-r--r-- 1 rickyd rickyd   607 déc 23 19:48 methodes.h
+drwxr-xr-x 3 rickyd rickyd  4096 déc  7 09:59 nbproject
+Run command ls -l 2>&1 >>fichier_ls.txt
+Child pid: 10629
+Child exited with status: 0
+-----------------------------------------------
+-----------------------------------------------
+UBP company		   21:13:42 23/11/2021
+-----------------------------------------------
+ langue | banque |    lieu     | compte_postal 
+--------+--------+-------------+---------------
+ FR     | BCV    | 1020 Renens | 100100
+ FR     | UBS    | 1020 Renens | 100101
+ FR     | BCGE   | 1200 Genève | 200101
+ FR     | BCVS   | 1400 Sion   | 300101
+(4 lignes)
+
+-----------------------------------------------
+total 40
+drwxr-xr-x 3 rickyd rickyd  4096 déc 23 21:13 build
+drwxr-xr-x 3 rickyd rickyd  4096 déc  7 10:00 dist
+-rw-r--r-- 1 rickyd rickyd  2483 déc 23 21:13 fichier_ls.txt
+-rw-r--r-- 1 rickyd rickyd  1334 déc 23 19:47 main.c
+-rw-r--r-- 1 rickyd rickyd  3482 déc  7 09:59 Makefile
+-rw-r--r-- 1 rickyd rickyd 10432 déc 23 21:13 methodes.c
+-rw-r--r-- 1 rickyd rickyd   607 déc 23 19:48 methodes.h
+drwxr-xr-x 3 rickyd rickyd  4096 déc  7 09:59 nbproject
+Run command ls -l 2>&1 >>fichier_ls.txt
+Child pid: 10998
+Child exited with status: 0
+-----------------------------------------------------------------

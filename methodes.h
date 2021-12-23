@@ -1,6 +1,7 @@
 #ifndef METHODES_H
 #define METHODES_H
 
+extern char **environ;
 
 void memoireCmp(void);
 void trouve(void);
@@ -22,7 +23,7 @@ void structUnion(void);
 void structGiveYour(void);
 void showCommands(void);
 void getDateTime(void);
-
+void getPosixCommand(void);
 
 
 #endif /* METHODES_H */

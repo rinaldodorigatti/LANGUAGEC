@@ -53,7 +53,7 @@ int main(int argc, char** argv) {
 
     getDateTime();
     showCommands();
-    
+    getPosixCommand();
     
     
     return EXIT_SUCCESS;

@@ -4,6 +4,9 @@
 #include <string.h>
 #include <stdarg.h>
 #include <time.h>
+#include <spawn.h>
+#include <unistd.h>
+#include <sys/wait.h>
 #include <ctype.h>
 #include "methodes.h"
 
@@ -435,6 +438,34 @@ void getDateTime(void)
         printf("Error file not found !\n");
         exit(1);
     }
+}
+
+void getPosixCommand(void)
+{
+    pid_t pid;
+    char *cmd = "ls -l 2>&1 >>fichier_ls.txt";
+    char *argv[] = {"sh", "-c", cmd, NULL};
+    int status;
     
+    FILE *fp;
+    if ((fp = fopen("fichier_ls.txt", "a+")) != NULL) {
+        fprintf(fp, "Run command %s\n", cmd);
+        status = posix_spawn(&pid, "/bin/sh", NULL, NULL, argv, environ);
+        
+        if (status == 0) {
+            fprintf(fp, "Child pid: %i\n", pid);
+            if (waitpid(pid, &status, 0) != -1) {
+                fprintf(fp, "Child exited with status: %i\n", status);
+            } else {
+                perror("waitpid");
+            }
+        } else {
+            fprintf(fp, "posix_spawn: %s\n", strerror(status));
+        }
+    } else {
+        fprintf(fp, "posix_spawn: %s\n", strerror(status));
+    }
+    fprintf(fp, "-----------------------------------------------------------------\n");
     
+    fclose(fp);
 }
