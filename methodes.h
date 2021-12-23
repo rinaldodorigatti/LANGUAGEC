@@ -20,6 +20,8 @@ char *to_lower(const char *ct);
 char *to_upper(const char *ct);
 void structUnion(void);
 void structGiveYour(void);
+void showCommands(void);
+void getDateTime(void);
 
 
 

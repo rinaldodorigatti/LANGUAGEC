@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 #include <assert.h>
 #include "methodes.h"
 
@@ -37,7 +38,7 @@ int main(int argc, char** argv) {
     
     printf("strcoll : %d\n", strcoll("Ldap", "Ldap"));
 
-    returnContent();
+    // returnContent();
     replaceExt();
     replaceExt2();
     searchString();
@@ -48,7 +49,11 @@ int main(int argc, char** argv) {
     printf("%s\n", to_upper(t_upper));
     
     // structUnion();
-    structGiveYour();
+    // structGiveYour();
+
+    getDateTime();
+    showCommands();
+    
     
     
     return EXIT_SUCCESS;

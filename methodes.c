@@ -3,6 +3,7 @@
 #include <assert.h>
 #include <string.h>
 #include <stdarg.h>
+#include <time.h>
 #include <ctype.h>
 #include "methodes.h"
 
@@ -363,12 +364,65 @@ void structGiveYour(void)
     
     printf("Please give your age : ");
     scanf("%d", &g.age);
-    printf("Your age : %d\n", g.age);
+    
     
     char c;
     while ((c = getchar()) != '\n' && c != EOF);
     printf("Please give your name : ");
     scanf("%[^\n]s", g.name);
-    printf("Your age : %s\n", g.name);
+   
+    
+    while ((c = getchar()) != '\n' && c != EOF);
+    printf("Please give your surname : ");
+    scanf("%[^\n]s", g.surname);
+    
+    printf("Your age     : %d\n", g.age);
+    printf("Your name    : %s\n", g.name);
+    printf("Your surname : %s\n", g.surname);
+    
+    char flowers[10][20] = {"Rose", "Poppy", "Lily", "Tulip", "Marigold"};
+    int total=sizeof(flowers)/sizeof(flowers[0]);
+    for (int n = 0; n <total; n++)
+    {
+      printf("%s\n",flowers[n]);
+    }
+}
+
+
+void showCommands(void)
+{
+    system("PGPASSWORD=lu48cie psql -U postgres dbha001 -c 'select * from banks;' >> fichier_ls.txt");
+    FILE *fp;
+    fp = fopen("fichier_ls.txt", "a+");
+    fprintf(fp, "-----------------------------------------------\n");
+    fclose(fp);
+}
+
+
+void getDateTime(void)
+{
+    time_t now = time(NULL);
+    
+    if (now == -1) {
+        printf("Erreur now\n");
+    }
+    
+    struct tm *ptm = localtime(&now);
+    
+    if (ptm == NULL) {
+        printf("Erreur ptm\n");
+    }
+    
+    printf("Time is : %02d:%02d:%02d\n", ptm->tm_hour, ptm->tm_min, ptm->tm_sec);
+    printf("Time is : %02d/%02d/%02d\n", ptm->tm_mday, ptm->tm_mon, ptm->tm_year + 1900);
+    
+    FILE *fp;
+    fp = fopen("fichier_ls.txt", "a+");
+    fprintf(fp, "-----------------------------------------------\n");
+    fprintf(fp, "UBP company\t\t   ");
+    fprintf(fp,"%02d:%02d:%02d %02d/%02d/%02d\n", ptm->tm_hour, ptm->tm_min, ptm->tm_sec,
+            ptm->tm_mday, ptm->tm_mon, ptm->tm_year + 1900);
+    fprintf(fp, "-----------------------------------------------\n");
+    fclose(fp);
     
 }
