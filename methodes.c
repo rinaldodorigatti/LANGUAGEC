@@ -392,10 +392,17 @@ void structGiveYour(void)
 void showCommands(void)
 {
     system("PGPASSWORD=lu48cie psql -U postgres dbha001 -c 'select * from banks;' >> fichier_ls.txt");
+    
     FILE *fp;
-    fp = fopen("fichier_ls.txt", "a+");
-    fprintf(fp, "-----------------------------------------------\n");
+    
+    if ((fp = fopen("fichier_ls.txt", "a+")) != NULL) {
+        fprintf(fp, "-----------------------------------------------\n");
     fclose(fp);
+    } else {
+        printf("Error file not found !\n");
+        exit(1);
+    }
+    
 }
 
 
@@ -417,12 +424,17 @@ void getDateTime(void)
     printf("Time is : %02d/%02d/%02d\n", ptm->tm_mday, ptm->tm_mon, ptm->tm_year + 1900);
     
     FILE *fp;
-    fp = fopen("fichier_ls.txt", "a+");
-    fprintf(fp, "-----------------------------------------------\n");
-    fprintf(fp, "UBP company\t\t   ");
-    fprintf(fp,"%02d:%02d:%02d %02d/%02d/%02d\n", ptm->tm_hour, ptm->tm_min, ptm->tm_sec,
-            ptm->tm_mday, ptm->tm_mon, ptm->tm_year + 1900);
-    fprintf(fp, "-----------------------------------------------\n");
-    fclose(fp);
+    if ((fp = fopen("fichier_ls.txt", "a+")) != NULL) {
+        fprintf(fp, "-----------------------------------------------\n");
+        fprintf(fp, "UBP company\t\t   ");
+        fprintf(fp,"%02d:%02d:%02d %02d/%02d/%02d\n", ptm->tm_hour, ptm->tm_min, ptm->tm_sec,
+                ptm->tm_mday, ptm->tm_mon, ptm->tm_year + 1900);
+        fprintf(fp, "-----------------------------------------------\n");
+        fclose(fp);
+    } else {
+        printf("Error file not found !\n");
+        exit(1);
+    }
+    
     
 }
