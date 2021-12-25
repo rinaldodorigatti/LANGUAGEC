@@ -726,3 +726,44 @@ void getArray06(void)
          printf("%d\n", array[c]);
    }
 }
+
+void charArray(void)
+{
+    printf("\n");
+    char array[10] = {'A', 'B', 'C', 'D', 'E', '\0'};
+    int size = sizeof(array) / sizeof(array[0]);
+    
+    for (int g = 0; g < size; g++) {
+        printf("%c ", array[g]);
+    }
+}
+
+
+void structArray(void)
+{
+    struct test {
+        int a;
+        char b;
+    };
+    
+    struct test st[3];
+    
+    struct test obj01, obj02, obj03;
+    obj01.a = 10;
+    obj01.b = 'A';
+    
+    obj02.a = 20;
+    obj02.b = 'B';
+    
+    obj03.a = 30;
+    obj03.b = 'C';
+    
+    st[0] = obj01;
+    st[1] = obj02;
+    st[2] = obj03;
+    
+    printf("\nFirst object  [%d] : [%c]\n", st[0].a, st[0].b);
+    printf("Next object   [%d] : [%c]\n", st[1].a, st[1].b);
+    printf("Last object   [%d] : [%c]\n", st[2].a, st[2].b);
+    
+}

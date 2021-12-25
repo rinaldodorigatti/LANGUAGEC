@@ -44,6 +44,9 @@ void getArray02(void);
 int deleteElement(int arr[], int n, int key);
 void getArray04(void);
 void getArray06(void);
+void charArray(void);
+void charArray(void);
+void structArray(void);
 
 
 
