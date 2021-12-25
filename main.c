@@ -75,6 +75,22 @@ int main(int argc, char** argv) {
     // getArray06();
     charArray();
     structArray();
+    charPointers();
+    pointerArray();
+    
+    char tableau[3];
+    char (*ptr)[3];
+    
+    tableau[0] = 'o';
+    tableau[1] = 'p';
+    tableau[2] = 'q';
+    
+    ptr = &tableau;
+    
+    appelTableau(ptr);
+    
+
+    
     
     
     return EXIT_SUCCESS;

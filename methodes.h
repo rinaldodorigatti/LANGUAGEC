@@ -47,6 +47,11 @@ void getArray06(void);
 void charArray(void);
 void charArray(void);
 void structArray(void);
+void charPointers(void);
+void pointerArray(void);
+void appelTableau(char (*ptr)[3]);
+
+
 
 
 

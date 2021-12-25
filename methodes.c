@@ -767,3 +767,41 @@ void structArray(void)
     printf("Last object   [%d] : [%c]\n", st[2].a, st[2].b);
     
 }
+
+
+void charPointers(void)
+{
+    char *first = "Bonjour, ";
+    char *next = "les amis ";
+    char *last = "de toujours.";
+    
+    char *arr[3];
+    
+    arr[0] = first;
+    arr[1] = next;
+    arr[2] = last;
+    
+    printf("\n%s %s %s\n", arr[0], arr[1], arr[2]);
+    
+}
+
+
+void pointerArray(void)
+{
+    char arr[3];
+    char (*ptr)[3];
+
+    arr[0] = 'a';
+    arr[1] = 'b';
+    arr[2] = 'c';
+
+    ptr = &arr;
+    
+    printf("\n%c\t%c\t%c\n", (*ptr)[0], (*ptr)[1], (*ptr)[2]);
+
+}
+
+void appelTableau(char (*ptr)[3])
+{
+    printf("\n%c\t%c\t%c\n", toupper((*ptr)[0]), toupper((*ptr)[1]), toupper((*ptr)[2]));
+}
