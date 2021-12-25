@@ -826,11 +826,24 @@ void newCharFunc(void)
 
 void showDoubleArray(char arr[4][10])
 {
+    printf("------------------ SECOND ---------------\n");
     for (size_t o = 0; o < 4; o++) {
         if (strcmp(arr[o], "rinaldo") == 0) {
             strncpy(arr[o], "Sara", sizeof("Sara"));
         }
         printf("Phrase : %s\tlongueur : %zu\n", arr[o], strlen(arr[o]));
     }
+    
+    int sum = 0;
+    int x[6] = {10, 20, 30, 40, 50, 60};
+    int l;
+    size_t longu = sizeof(x)/sizeof(x[0]);
+    
+    for (l = 0; l < longu; l++) {
+        sum += *(x+l);
+    }
+    printf("------------------ SUM ---------------\n");
+    printf("Sum = %d\n", sum);
+    printf("------------------ END ---------------\n");
 }
 

@@ -91,6 +91,8 @@ int main(int argc, char** argv) {
     
     newCharFunc();
     
+    printf("------------------ PREMIER ---------------\n");
+    
     char doubleTableau[4][10] = {"rinaldo", "dorigatti", "estavayer", "1470"};
     
     for (size_t o = 0; o < 4; o++) {
