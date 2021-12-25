@@ -8,7 +8,12 @@
 #include <unistd.h>
 #include <sys/wait.h>
 #include <ctype.h>
+#include <stdbool.h>
+#include <assert.h>
 #include "methodes.h"
+
+
+int appels = 0;
 
 
 void memoireCmp(void)
@@ -468,4 +473,155 @@ void getPosixCommand(void)
     fprintf(fp, "-----------------------------------------------------------------\n");
     
     fclose(fp);
+}
+
+void getDiviseur(void)
+{
+    int a,b;
+    printf("Donner moi deux nombres : ");
+    scanf("%d %d", &a, &b);
+    
+    int min = (a < b) ? a : b;
+    
+    for (int i = 2; i <= min; ++i) {
+        if (a % i == 0 && b % i == 0) {
+            printf("Le plus petit diviseur entre %d et %d est %d\n", a, b, i);
+            break;
+        }
+    }
+}
+
+int returnNumber(int a)
+{
+    int b, total;
+    b = 10;
+    total = a * b;
+    return total;
+}
+
+int getNumbers(int a, int b)
+{
+    int g = (a < b) ? a : b;
+    
+    for (int i = 2; i <= g; ++i) {
+        if (a % i == 0 && b % i == 0) {
+            return i;
+        }
+    }
+    return 0;
+}
+
+void startGetNumbers(void)
+{
+    int a,b;
+    printf("Donner moi deux nombres : ");
+    scanf("%d %d", &a, &b);
+    
+    int resultat = getNumbers(a, b);
+    
+    if (resultat != 0) {
+        printf("Le plus petit diviseur entre %d et %d est %d\n", a, b, resultat);
+    }
+}
+
+
+void incrementeAppels(void)
+{
+    ++appels;
+}
+
+
+void appelincrementeAppels(void)
+{
+    incrementeAppels();
+    incrementeAppels();
+    printf("La valeur de la variable 'appels' est : %d\n", appels);
+}
+
+int compteur(void)
+{
+    static int n;
+    return ++n;
+}
+
+void getCompteur(void)
+{
+    compteur();
+    printf("n = %d\n", compteur());
+    compteur();
+    printf("n = %d\n", compteur());
+    
+    int total;
+    total = (compteur() -1) + 10;
+    printf("total = %d\n", total);
+}
+
+
+void triangle(void)
+{
+    int nombre = 5;
+    for (int i = 0; i < 5; i++)
+    {
+        for (int j = 0; j < nombre; j++)
+            printf("*");
+        printf("\n");
+    }
+}
+
+void getFgets(void)
+{
+    char name[100];
+    
+    char *ptr = NULL;
+
+    while ((ptr = fgets(name, 100, stdin)) != NULL)
+    {
+        if (*ptr == '\n') {
+            break;
+        }
+    }
+    printf("Your name is : %s\n", name);
+}
+
+
+void array01(void)
+{
+    int array[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    size_t n = sizeof(array) / sizeof(array[0]);
+    for (int i = 0; i < n; i++) {
+        printf("%d\n", array[i]);
+    }
+}
+
+int getArray(int a[10])
+{
+    for (int i = 0; i < 10; i++) {
+        printf("%d\n", a[i]);
+    }
+    return *a;
+}
+
+int findElement(int arr[], int lon, int key)
+{
+    int i;
+    for (i = 0; i < lon; i++) {
+        if (arr[i] == key) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+void callfindElement(void)
+{
+    int arr[] = {1, 4, 6, 9, 0};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int key = 4;
+    int position = findElement(arr, n, key);
+    
+    if (position == -1) {
+        printf("Element NOT Found");
+    } else {
+        printf("Element Found at Position: %d", position + 1 );
+    }
 }

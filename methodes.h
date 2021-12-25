@@ -2,6 +2,7 @@
 #define METHODES_H
 
 extern char **environ;
+extern int appels;
 
 void memoireCmp(void);
 void trouve(void);
@@ -24,6 +25,20 @@ void structGiveYour(void);
 void showCommands(void);
 void getDateTime(void);
 void getPosixCommand(void);
+void getDiviseur(void);
+int returnNumber(int a);
+int getNumbers(int a, int b);
+void startGetNumbers(void);
+void incrementeAppels(void);
+void appelincrementeAppels(void);
+int compteur(void);
+void getCompteur(void);
+void triangle(void);
+void getFgets(void);
+void array01(void);
+int getArray(int a[10]);
+int findElement(int arr[], int lon, int key);
+void callfindElement(void);
 
 
 #endif /* METHODES_H */

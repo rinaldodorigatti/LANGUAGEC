@@ -52,8 +52,25 @@ int main(int argc, char** argv) {
     // structGiveYour();
 
     getDateTime();
-    showCommands();
-    getPosixCommand();
+    // showCommands();
+    // getPosixCommand();
+    // getDiviseur();
+    
+    int gg = 10;
+    printf("GG : %d\n", returnNumber(gg));
+    
+    // startGetNumbers();
+    appelincrementeAppels();
+    getCompteur();
+    triangle();
+    getFgets();
+    // array01();
+    
+    int z[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    getArray(z);
+    
+    callfindElement();
+    
     
     
     return EXIT_SUCCESS;
