@@ -863,5 +863,31 @@ void showDoubleArray(char arr[4][10])
     printf("&y[1] - 1 = %d\t%p\n", *(ptr-1), ptr-1);
     printf("&y[1] + 1 = %d\t%p\n", *(ptr+1), ptr+1);
     
+    char t = 'A';
+    char *d;
+    d = &t;
+    *d = 'M';
+    
+    char b = 'B';
+    char c;
+    c = b;
+    
+    printf("%c - %c - %c - %c\n", t, *d, b, c);
+    
+    c = 'D';
+    printf("%c - %c - %c - %c\n", t, *d, b, c);
+    
+    char *monchar;
+    monchar = (char*)malloc(sizeof(char)*10);
+    
+    monchar = "abcd";
+    printf("Lettre => %s\n", monchar);
+    
+    char tutu[7] = "lettre";
+    printf("Lettre => %s\n", tutu);
+    
+    char tata[8] = "lettre2";
+    printf("Lettre => %s\n", tata);
+    
 }
 
