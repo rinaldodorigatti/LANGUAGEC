@@ -805,3 +805,32 @@ void appelTableau(char (*ptr)[3])
 {
     printf("\n%c\t%c\t%c\n", toupper((*ptr)[0]), toupper((*ptr)[1]), toupper((*ptr)[2]));
 }
+
+
+void newCharFunc(void)
+{
+    char lettre[4];
+    char *str = "abc";
+    
+    memset(lettre, '\0', sizeof("abc"));
+    strncpy(lettre, str, sizeof("abc"));
+    
+    printf("\nBefore : %s\n", lettre);
+    
+    lettre[0] = 'Z';
+    
+    printf("\nAfter  : %s\n", lettre);
+}
+
+
+
+void showDoubleArray(char arr[4][10])
+{
+    for (size_t o = 0; o < 4; o++) {
+        if (strcmp(arr[o], "rinaldo") == 0) {
+            strncpy(arr[o], "Sara", sizeof("Sara"));
+        }
+        printf("Phrase : %s\tlongueur : %zu\n", arr[o], strlen(arr[o]));
+    }
+}
+

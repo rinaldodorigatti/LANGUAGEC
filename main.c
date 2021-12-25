@@ -89,7 +89,15 @@ int main(int argc, char** argv) {
     
     appelTableau(ptr);
     
-
+    newCharFunc();
+    
+    char doubleTableau[4][10] = {"rinaldo", "dorigatti", "estavayer", "1470"};
+    
+    for (size_t o = 0; o < 4; o++) {
+        printf("Phrase : %s\tlongueur : %zu\n", doubleTableau[o], strlen(doubleTableau[o]));
+    }
+    
+    showDoubleArray(doubleTableau);
     
     
     

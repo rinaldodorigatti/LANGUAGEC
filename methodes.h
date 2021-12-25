@@ -50,6 +50,8 @@ void structArray(void);
 void charPointers(void);
 void pointerArray(void);
 void appelTableau(char (*ptr)[3]);
+void newCharFunc(void);
+void showDoubleArray(char arr[4][10]);
 
 
 
