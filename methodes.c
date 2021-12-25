@@ -845,5 +845,23 @@ void showDoubleArray(char arr[4][10])
     printf("------------------ SUM ---------------\n");
     printf("Sum = %d\n", sum);
     printf("------------------ END ---------------\n");
+    
+    /*
+        &x[1] is equivalent to x+1 and x[1] is equivalent to *(x+1)
+        &x[2] is equivalent to x+2 and x[2] is equivalent to *(x+2)
+        Basically, &x[i] is equivalent to x+i and x[i] is equivalent to *(x+i)
+
+     */
+    
+    int y[5] = {100, 200, 300, 400, 500};
+    int *ptr;
+    
+    ptr = &y[1];
+    printf("&y[1]     = %d\t%p\n", *ptr, ptr);
+    printf("&y[1] - 1 = %d\t%p\n", (*ptr-1), ptr-1);
+    printf("&y[1] + 1 = %d\t%p\n", (*ptr+1), ptr+1);
+    printf("&y[1] - 1 = %d\t%p\n", *(ptr-1), ptr-1);
+    printf("&y[1] + 1 = %d\t%p\n", *(ptr+1), ptr+1);
+    
 }
 
