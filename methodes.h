@@ -43,6 +43,8 @@ int insertSorted(int arr[], int n, int key, int capacity);
 void getArray02(void);
 int deleteElement(int arr[], int n, int key);
 void getArray04(void);
+void getArray06(void);
+
 
 
 #endif /* METHODES_H */

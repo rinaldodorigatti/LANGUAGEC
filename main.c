@@ -72,6 +72,7 @@ int main(int argc, char** argv) {
     callfindElement();
     getArray02();
     getArray04();
+    getArray06();
     
     
     
