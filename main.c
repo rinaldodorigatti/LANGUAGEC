@@ -66,10 +66,12 @@ int main(int argc, char** argv) {
     getFgets();
     // array01();
     
-    int z[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    getArray(z);
+    // int z[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    // getArray(z);
     
     callfindElement();
+    getArray02();
+    getArray04();
     
     
     

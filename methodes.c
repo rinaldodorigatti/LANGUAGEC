@@ -625,3 +625,74 @@ void callfindElement(void)
         printf("Element Found at Position: %d", position + 1 );
     }
 }
+
+
+int insertSorted(int arr[], int n, int key, int capacity)
+{
+    if (n >= capacity) {
+        return n;
+    }
+    arr[n] = key;
+    return (n + 1);
+}
+
+void getArray02(void)
+{
+    int arr[20] = {1, 8, 5, 0, 3, 2};
+    int capacity = sizeof(arr) / sizeof(arr[0]);
+    int n = 3;
+    int i;
+    int key = 11;
+    
+    printf("\nBefore insertion : ");
+    for (i = 0; i < 6; i++) {
+        printf("%d ", arr[i]);
+    }
+    
+    n = insertSorted(arr, 3, key, capacity);
+    
+    printf("\nAfter insertion : ");
+    
+    for (i = 0; i < 6; i++) {
+        printf("%d ", arr[i]);
+    }
+}
+
+
+int deleteElement(int arr[], int n, int key)
+{
+    int pos = findElement(arr, n, key);
+    printf("\nPOS : %d", pos);
+    if (pos == -1) {
+        printf("\nElement %d not found\n", arr[pos]);
+        return n;
+    }
+    int i;
+    for (i = pos; i < n - 1; i++) {
+        arr[i] = arr[i + 1];
+    }
+    return n - 1;
+}
+
+void getArray04(void)
+{
+    int i;
+    int arr[] = {1, 5, 9, 3, 4};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    printf("\nSIZE : %d", size);
+    int key = 3;
+    
+    printf("\nBefore deletion : ");
+    
+    for (i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    
+    size = deleteElement(arr, size, key);
+    
+    printf("\nAfter deletion : ");
+    
+    for (i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+}

@@ -39,6 +39,10 @@ void array01(void);
 int getArray(int a[10]);
 int findElement(int arr[], int lon, int key);
 void callfindElement(void);
+int insertSorted(int arr[], int n, int key, int capacity);
+void getArray02(void);
+int deleteElement(int arr[], int n, int key);
+void getArray04(void);
 
 
 #endif /* METHODES_H */
